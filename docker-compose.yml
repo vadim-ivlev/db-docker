@@ -1,0 +1,28 @@
+version: '3'
+services:
+    
+    # Copy of database on 2018.09.04        
+    mysqldb:
+        image: rgru/web-db:5.6-with-data
+        container_name: mysql
+        network_mode: bridge
+        ports:
+            - "8989:3306"
+        restart: always
+    
+
+    # To control database
+    myadmin:
+        image: phpmyadmin/phpmyadmin
+        container_name: phpmyadmin
+        network_mode: bridge
+        ports:
+            - "8080:80"
+        environment:
+            - PMA_ARBITRARY=1
+            - PMA_HOST=mysql
+        restart: always
+        depends_on:
+            - mysqldb
+        links:
+            - mysqldb
