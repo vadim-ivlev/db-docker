@@ -23,11 +23,19 @@ comments, d2, front, jurist, mysql, outer, performance_schema, subs, subsmag, wo
 
 --------------------------
 
+**Запуск**:
 
-Запуск:
 ```sh
 docker-compose up -d
 ```
+
+> На старт базы данных может потребоваться время. Состояние контейнеров в реальном времени можно посмотреть командой:
+```sh
+sudo docker-compose logs -f 
+```
+> Прервать просмотр логов `Ctrl-C`.
+
+
 
 Временный останов:
 ```sh
