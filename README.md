@@ -62,17 +62,11 @@ docker-compose logs -f
 
 
 Просмотр базы данных в phpmyadmin:
-http://localhost:8082
+http://localhost:8005
 login:root
 password:root
 
 
 
 
-Локальный MySQL порт: 8989
-
- 
-
-
-
-
+Локальный MySQL порт: 3305
