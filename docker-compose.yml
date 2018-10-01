@@ -10,6 +10,17 @@ services:
             - "3305:3306"
         restart: always
     
+    # to use in containers
+    redis:
+        image: redis
+        container_name: redis
+        network_mode: bridge
+        ports:
+            - "6399:6379"
+        restart: always
+
+
+
 
     # To control database
     myadmin:
